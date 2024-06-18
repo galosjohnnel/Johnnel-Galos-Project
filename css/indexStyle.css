@@ -1,0 +1,810 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap");
+
+* {
+  padding: 0;
+
+  margin: 0;
+
+  box-sizing: border-box;
+
+  scroll-behavior: smooth;
+
+  list-style: none;
+
+  text-decoration: none;
+}
+
+:root {
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  --text-primary: #393e46;
+  --text-secondary: #f2f2f2;
+  --bg-primary: #222831;
+  --bg-secondary: #f96d00;
+}
+
+body {
+  color: var(--bg-primary);
+  background-color: var(--text-primary);
+  margin: 0;
+  padding: 0;
+}
+
+/* Navigation Menu */
+
+header {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 2rem 10rem;
+  background: var(--text-primary);
+  z-index: 100;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+}
+
+.navLogo {
+  text-decoration: none;
+  font-size: 3vw;
+  color: var(--bg-secondary);
+  font-weight: 600;
+}
+
+#header div .navMenu {
+  margin-bottom: 0;
+  padding-left: 0;
+}
+
+.navMenu {
+  display: flex;
+  justify-content: center;
+}
+
+.navMenu li {
+  list-style: none;
+  padding: 0 15px;
+  position: relative;
+}
+
+#menuBtn a {
+  color: black;
+}
+
+.navMenu li a {
+  text-decoration: none;
+  font-size: 1.3vw;
+  color: var(--text-secondary);
+}
+
+.navMenu li a i {
+  font-size: 30px;
+}
+
+.navMenu li a:hover {
+  color: var(--bg-secondary);
+}
+
+.active-link {
+  color: var(--bg-secondary);
+  font-weight: bold;
+}
+
+#close {
+  display: none;
+}
+
+#menuBtn {
+  display: none;
+  align-items: center;
+}
+
+#menuBtn #menu {
+  cursor: pointer;
+}
+
+/* Home */
+
+.homeContainer {
+  padding: 12rem 12rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.homeLeft h1 {
+  color: var(--text-secondary);
+
+  font-size: 2rem;
+}
+
+.homeLeft h2 {
+  color: var(--bg-secondary);
+
+  font-size: 4rem;
+}
+
+.homeRight img {
+  background-color: var(--text-primary);
+
+  max-width: 100%;
+
+  width: 300px;
+
+  margin-left: 300px;
+}
+
+/* Product */
+
+.productContainer {
+  margin-top: 10rem;
+  padding: 2rem 12rem;
+}
+
+.productContainer .heading {
+  text-align: center;
+  margin-top: 8rem;
+}
+
+.productContainer h3 {
+  color: var(--text-secondary);
+  font-weight: 350;
+  font-size: 2rem;
+  text-align: center;
+  width: 100%;
+}
+
+.productItem {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin-top: 2rem;
+}
+
+.productItem form {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: 25vw;
+  margin-bottom: 3rem;
+  padding: 1rem;
+  border: 1px solid gray;
+  border-radius: 0.5rem;
+  box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.6);
+  transition: 0.5s;
+}
+
+.productItem form:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 1rem 1rem 0 rgba(0, 0, 0, 0.6);
+}
+
+.productItem form img {
+  width: 100%;
+  height: 15rem;
+  object-fit: contain;
+  margin-bottom: 1rem;
+  border-radius: 1rem;
+}
+
+.productItem form .productName {
+  font-size: 1.5rem;
+  color: var(--text-secondary);
+}
+
+.productItem form .productPrice {
+  color: var(--text-secondary);
+  font-size: 1.5rem;
+  margin: 1.5rem 0;
+}
+
+.productContainer form .lower {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.productItem form input[type="number"] {
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+  font-size: 1rem;
+  width: 3rem;
+  padding: 5px;
+  margin-right: 0.5rem;
+  border-color: transparent;
+  border-radius: 0.3rem;
+}
+
+.productItem form .submitButton {
+  width: 8rem;
+  height: 3rem;
+  font-family: "Poppins", sans-serif;
+  font-weight: 650;
+  background-color: var(--bg-secondary);
+  border-color: transparent;
+  border-radius: 1rem;
+  color: var(--text-secondary);
+  cursor: pointer;
+}
+
+.productItem form .submitButton:hover {
+  background-color: #af4d01;
+  transition: 0.3s;
+}
+
+/* Services */
+
+.servicesContainer {
+  margin-top: 10rem;
+  padding: 2rem 12rem;
+  height: 100vh;
+}
+
+.servicesContainer .heading {
+  text-align: center;
+  margin-top: 8rem;
+}
+
+.servicesBox img {
+  max-width: 50%;
+}
+
+.servicesBox {
+  margin-top: 3rem;
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.servicesItem {
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column-reverse;
+  align-items: center;
+}
+
+.heading h1 {
+  color: var(--bg-secondary);
+  font-size: 3rem;
+  font-weight: 400;
+}
+
+.heading h2 {
+  color: var(--text-secondary);
+
+  font-size: 2rem;
+
+  font-weight: 400;
+
+  margin-top: 5rem;
+}
+
+.servicesItem p {
+  color: var(--text-secondary);
+  font-size: 1rem;
+  text-align: center;
+}
+
+/* About */
+.aboutContainer {
+  margin-top: 10rem;
+  padding: 2rem 12rem;
+  height: 100vh;
+}
+
+.aboutContainer .heading {
+  text-align: center;
+
+  margin-top: 8rem;
+}
+
+.aboutBox {
+  margin-top: 5rem;
+
+  padding: 2rem 12rem;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-around;
+}
+
+.aboutItem i {
+  color: var(--text-secondary);
+
+  font-size: 5rem;
+}
+
+.aboutItem p {
+  font-size: 1.5rem;
+
+  color: var(--text-secondary);
+}
+
+.aboutItem p strong {
+  color: var(--bg-secondary);
+}
+
+/* Checkout Container */
+
+.checkOutContainer {
+  margin-top: 15vh;
+
+  padding: 2rem 12rem;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  flex-direction: column;
+}
+
+.checkOutContainer .heading {
+  text-align: center;
+}
+
+.checkOutForm {
+  width: 500px;
+}
+
+form .textField {
+  position: relative;
+
+  border-bottom: 1px solid gray;
+
+  margin: 2rem 0;
+}
+
+.textField input {
+  width: 100%;
+
+  padding: 0 0.5rem;
+
+  height: 2.5rem;
+
+  font-family: "Poppins", sans-serif;
+
+  color: var(--text-secondary);
+
+  border: none;
+
+  background: none;
+
+  outline: none;
+}
+
+.textField label {
+  position: absolute;
+
+  top: 50%;
+
+  left: 5px;
+
+  color: gray;
+
+  transform: translateY(-50%);
+
+  pointer-events: none;
+
+  transition: 0.5s;
+}
+
+.textField span::before {
+  content: "";
+
+  position: absolute;
+
+  top: 2.5rem;
+
+  left: 0;
+
+  width: 0%;
+
+  height: 1px;
+
+  background: var(--bg-secondary);
+
+  transition: 0.5s;
+}
+
+.textField input:focus ~ label,
+.textField input:valid ~ label {
+  top: -5px;
+
+  color: var(--bg-secondary);
+}
+
+.textField input:focus ~ span::before,
+.textField input:valid ~ span::before {
+  width: 100%;
+}
+
+.fileField{
+  padding: 1rem 0 1rem 0;
+  color: white;
+}
+
+.pMethod {
+  display: block;
+
+  font-family: "Poppins", sans-serif;
+
+  width: 100%;
+
+  padding: 0.5rem 1rem;
+
+  line-height: 1.5;
+
+  color: var(--text-secondary);
+
+  background-color: var(--text-primary);
+
+  border: 1px solid gray;
+
+  border-radius: 0.5rem;
+}
+
+.pMethod:focus {
+  border-color: var(--bg-secondary);
+
+  outline: 0;
+}
+
+.submitButton {
+  width: 100%;
+
+  height: 3rem;
+
+  font-family: "Poppins", sans-serif;
+
+  font-weight: 650;
+
+  background-color: var(--bg-secondary);
+
+  border-color: transparent;
+
+  border-radius: 1rem;
+
+  color: var(--text-secondary);
+
+  cursor: pointer;
+}
+
+.submitButton:hover {
+  background-color: #af4d01;
+
+  transition: 0.3s;
+}
+
+.qrIcon {
+  position: absolute;
+
+  top: 50%;
+
+  right: 5px;
+
+  transform: translateY(-50%);
+
+  cursor: pointer;
+}
+
+.qrCodeContainer img {
+  width: 40vw;
+
+  height: auto;
+}
+
+/* Cart */
+
+.userTable {
+  background-color: var(--text-secondary);
+
+  border-collapse: collapse;
+
+  margin: auto;
+
+  min-width: 500px;
+
+  border-radius: 5px 5px 0 0;
+
+  overflow: hidden;
+
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.userTable thead tr {
+  background-color: var(--bg-secondary);
+
+  color: var(--bg-primary);
+}
+
+.userTable th,
+.userTable td {
+  padding: 0.8rem 1rem;
+
+  text-align: center;
+}
+
+.userTable tbody tr {
+  border-bottom: 1px solid lightgray;
+}
+
+.userTable input[type="number"] {
+  border: 2px solid gray;
+
+  border-radius: 1rem;
+
+  font-size: 16px;
+
+  padding: 1rem;
+
+  width: 6rem;
+}
+
+.userTable .univBtn {
+  background-color: var(--bg-secondary);
+
+  border: none;
+
+  font-family: "Poppins", sans-serif;
+
+  border-radius: 1rem;
+
+  color: var(--text-secondary);
+
+  cursor: pointer;
+
+  padding: 1rem;
+
+  text-align: center;
+
+  text-decoration: none;
+}
+
+.userTable .deleteBtn {
+  display: block;
+
+  background-color: var(--bg-secondary);
+
+  border: none;
+
+  font-family: "Poppins", sans-serif;
+
+  border-radius: 1rem;
+
+  color: var(--text-secondary);
+
+  cursor: pointer;
+
+  padding: 1rem;
+
+  text-align: center;
+
+  text-decoration: none;
+}
+
+.userTable .grandTotal {
+  text-align: left;
+
+  padding: 2rem 2rem;
+
+  font-family: "Poppins", sans-serif;
+}
+
+.userTable .btn {
+  display: flex;
+
+  background-color: var(--bg-secondary);
+
+  border: none;
+
+  font-family: "Poppins", sans-serif;
+
+  border-radius: 1rem;
+
+  color: var(--text-secondary);
+
+  cursor: pointer;
+
+  padding: 1.5rem;
+
+  text-align: center;
+
+  justify-content: center;
+
+  text-decoration: none;
+}
+
+/* Modals */
+
+#addModal {
+  position: fixed;
+
+  top: 0;
+
+  bottom: 0;
+
+  right: 0;
+
+  left: 0;
+
+  background: rgba(0, 0, 0, 0.6);
+
+  z-index: 100;
+
+  display: none;
+
+  justify-content: center;
+
+  align-items: center;
+}
+
+#accountModal {
+  position: fixed;
+
+  top: 0;
+
+  bottom: 0;
+
+  right: 0;
+
+  left: 0;
+
+  background: rgba(0, 0, 0, 0.6);
+
+  z-index: 100;
+
+  display: none;
+
+  justify-content: center;
+
+  align-items: center;
+}
+
+#orderModal {
+  position: fixed;
+
+  top: 0;
+
+  bottom: 0;
+
+  right: 0;
+
+  left: 0;
+
+  background: rgba(0, 0, 0, 0.6);
+
+  z-index: 100;
+
+  display: none;
+
+  justify-content: center;
+
+  align-items: center;
+}
+
+#qrModal {
+  position: fixed;
+
+  top: 0;
+
+  bottom: 0;
+
+  right: 0;
+
+  left: 0;
+
+  background: rgba(0, 0, 0, 0.6);
+
+  z-index: 100;
+
+  display: none;
+
+  justify-content: center;
+
+  align-items: center;
+}
+
+.modal {
+  background: var(--text-secondary);
+  padding: 10px 0px 20px 0;
+  border-radius: 10px;
+  width: auto;
+  text-align: center;
+  height: auto;
+  max-height: 600px;
+  overflow: auto;
+  padding: 1rem;
+}
+
+.modalQR {
+  background: var(--text-secondary);
+  border-radius: 10px;
+}
+
+.modalAcc {
+  background: var(--text-secondary);
+
+  padding: 10px 0px 20px 0;
+
+  border-radius: 10px;
+
+  width: auto;
+
+  text-align: center;
+
+  height: auto;
+
+  max-height: 600px;
+
+  padding: 1rem;
+}
+
+.topForm {
+  display: flex;
+
+  justify-content: flex-end;
+}
+
+.topForm .closeModal {
+  cursor: pointer;
+
+  padding: 0 20px;
+
+  font-size: 20px;
+}
+
+/* Account */
+
+.account {
+  border-radius: 5px;
+
+  padding: 20px;
+
+  margin-bottom: 20px;
+}
+
+.account p {
+  margin: 0;
+}
+
+.account span {
+  color: var(--bg-secondary);
+}
+
+.account .flex {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  justify-content: space-between;
+}
+
+.account .btn {
+  background-color: var(--bg-secondary);
+
+  color: var(--text-secondary);
+
+  border: none;
+
+  border-radius: 1rem;
+
+  padding: 1rem;
+
+  cursor: pointer;
+
+  transition: background-color 0.3s ease;
+
+  margin: 2rem 0.5rem 0.5rem 0.5rem;
+}
+
+.account .btn:hover {
+  background-color: rgb(156, 61, 27);
+}

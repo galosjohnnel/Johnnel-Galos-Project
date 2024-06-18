@@ -1,0 +1,339 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap");
+
+:root {
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  --text-primary: #393e46;
+  --text-secondary: #f2f2f2;
+  --bg-primary: #222831;
+  --bg-secondary: #f96d00;
+}
+
+@media (max-width: 1200px) {
+  .heading h2 {
+    margin-top: 3rem;
+  }
+
+  .aboutBox {
+    margin-top: 3rem;
+  }
+
+  .heading h2 {
+    /* margin: 1rem 0 1rem 0; */
+    font-size: 1.5rem;
+  }
+
+  .productContainer {
+    padding: 2rem 4rem;
+  }
+
+  .productItem form .productName {
+    font-size: 1.2rem;
+  }
+
+  .productItem form .productPrice {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  .servicesContainer {
+    padding: 2rem 4rem;
+  }
+
+  .servicesBox {
+    padding: 2rem;
+  }
+
+  .aboutContainer {
+    padding: 2rem 4rem;
+  }
+
+  .servicesItem p {
+    font-size: 1.5rem;
+  }
+
+  .homeRight {
+    display: none;
+  }
+
+  .productItem form .productName {
+    font-size: 1.2rem;
+  }
+
+  .productItem form .productPrice {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 900px) {
+  header {
+    padding: 2rem 5rem;
+  }
+
+  .navMenu li a {
+    font-size: 1.5vw;
+  }
+
+  .productItem form {
+    width: 40vw;
+  }
+
+  .servicesContainer {
+    padding: 2rem 3rem;
+  }
+
+  .aboutContainer {
+    padding: 2rem 0;
+  }
+}
+
+@media (max-width: 768px) {
+  header {
+    padding: 2rem;
+  }
+
+  .navLogo {
+    font-size: 4vw;
+  }
+
+  .navMenu li a {
+    font-size: 1.7vw;
+  }
+
+  .productContainer {
+    padding: 4rem;
+  }
+
+  .productContainer .heading {
+    margin-top: 3.5rem;
+  }
+
+  .productItem form {
+    width: 40vw;
+  }
+
+  .productItem form .productName {
+    font-size: 1.2rem;
+  }
+
+  .servicesContainer .heading {
+    margin-top: 6rem;
+  }
+
+  .servicesBox {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .servicesBox img {
+    max-width: 40%;
+  }
+
+  .servicesItem p {
+    font-size: 3vw;
+  }
+
+  .aboutContainer {
+    padding: 2rem;
+  }
+
+  .aboutContainer .heading {
+    margin-top: 6rem;
+  }
+
+  .aboutBox {
+    padding: 2rem;
+    margin-top: 1rem;
+  }
+
+  .checkOutContainer {
+    padding: 0;
+  }
+
+  .modal {
+    margin: 0 1rem;
+  }
+}
+
+@media (max-width: 600px) {
+  header {
+    padding: 1rem 1rem;
+  }
+
+  .navLogo {
+    display: none;
+  }
+
+  .navMenu {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    position: fixed;
+    top: 0;
+    left: -300px;
+    height: 100vh;
+    width: 150px;
+    background-color: var(--text-primary);
+    box-shadow: 0 40px 60px rgba(0, 0, 0, 0.1);
+    padding: 2rem 0 0 1rem;
+    transition: 0.5s ease;
+  }
+
+  #menuBtn i {
+    color: var(--bg-secondary);
+  }
+
+  .navMenu.active {
+    left: 0;
+  }
+
+  .navMenu li {
+    margin-bottom: 25px;
+  }
+
+  .navMenu li a {
+    font-size: 3.5vw;
+  }
+
+  #menuBtn {
+    display: flex;
+    align-items: center;
+  }
+
+  #close {
+    display: block;
+    color: var(--bg-secondary);
+    margin-bottom: 3rem;
+  }
+
+  #menu {
+    cursor: pointer;
+  }
+
+  .productItem form {
+    width: 70vw;
+  }
+}
+
+@media (max-width: 480px) {
+  .homeLeft h1 {
+    font-size: 10vw;
+  }
+
+  .homeLeft h2 {
+    font-size: 12vw;
+  }
+
+  .productContainer .heading {
+    margin-top: 0;
+  }
+
+  .productItem form {
+    width: 100vw;
+  }
+
+  .productItem form .productName {
+    font-size: 1.2rem;
+  }
+
+  .productItem form .productPrice {
+    font-size: 1.2rem;
+  }
+
+  .servicesContainer .heading {
+    margin-top: 2rem;
+  }
+
+  .servicesBox {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .servicesItem p {
+    font-size: 1rem;
+  }
+
+  .aboutContainer .heading {
+    margin-top: 3rem;
+  }
+
+  .aboutBox {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .aboutItem {
+    width: 100%;
+    text-align: center;
+  }
+
+  .adminTable th,
+  .adminTable td {
+    padding: 0;
+  }
+
+  .checkOutForm {
+    width: 80vw;
+  }
+}
+
+@media (max-width: 320px) {
+  header {
+    height: 0rem;
+  }
+
+  #menuBtn {
+    display: block;
+    position: fixed;
+    top: 6%;
+  }
+
+  .navMenu.active {
+    height: 150%;
+  }
+
+  #close {
+    display: block;
+    position: relative;
+    left: 50%;
+  }
+
+  .homeContainer {
+    padding-left: 9rem;
+  }
+  .homeLeft h1 {
+    font-size: 8vw;
+  }
+
+  .homeLeft h2 {
+    font-size: 12vw;
+  }
+
+  .homeRight {
+    display: none;
+  }
+
+  .productContainer {
+    padding: 0 1rem;
+  }
+
+  .productContainer .heading {
+    padding-top: 3rem;
+  }
+
+  .heading h2 {
+    margin-top: 1rem;
+    font-size: 1.2rem;
+  }
+
+  .servicesBox {
+    margin-top: 0;
+    padding: 0;
+  }
+
+  .aboutContainer .heading {
+    margin-top: 1.5rem;
+  }
+}
